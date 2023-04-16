@@ -1,0 +1,48 @@
+
+body, html, * {
+  box-sizing: border-box;
+  margin: 0;
+  transition: all .3s;
+  font-family: sans-serif;
+}
+
+html, body {
+  min-height: 100vh;
+
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+html {
+  background: #f36291;
+  background: linear-gradient(180deg, #f037a5 60%, #fae62d 140%);
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+body::before {
+  content: " "; 
+  top: -728px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(1.4);
+  position: absolute;
+  background-image: url("/assets/index-main-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}

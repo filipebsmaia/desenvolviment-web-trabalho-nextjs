@@ -1,6 +1,8 @@
 'use client'
+
 import { useEffect, useState } from 'react';
 import styles from '../page.module.css'
+import Button from '@/components/Button';
 
 interface User {
   id: number;
@@ -27,18 +29,18 @@ export default function Home() {
 
   useEffect(() => {
     getUsers().then(res => {
-      console.log(res)
       setUsers(res);
     })
   }, [])
 
   return (
     <main className={styles.main}>
+      <h1>Lista de usuários</h1>
       <div className={styles.description}>
         {users.map(user => (
-          <p key={user.id}>
+          <Button key={user.id}>
             {user.id} {user.name}
-          </p>
+          </Button>
         ))}
       </div>
     </main>

@@ -1,4 +1,5 @@
 
+import Button from '@/components/Button';
 import styles from '../page.module.css'
 
 interface User {
@@ -22,15 +23,15 @@ const getUsers = async (): Promise<Array<User>> => {
 
 export default async function Home() {
   const users = await getUsers();
-  console.log(users)
 
   return (
     <main className={styles.main}>
+    <h1>Lista de usuários</h1>
       <div className={styles.description}>
         {users.map(user => (
-          <p key={user.id}>
+          <Button key={user.id}>
             {user.id} {user.name}
-          </p>
+          </Button>
         ))}
       </div>
     </main>
