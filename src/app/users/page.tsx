@@ -7,6 +7,11 @@ interface User {
   name: string;
 }
 
+export const metadata = {
+  title: 'User List',
+  description: 'User list with ssr',
+}
+
 const getUsers = async (): Promise<Array<User>> => {
   const res = await fetch("http://localhost:3000/api/users", {
     headers: {

@@ -3,6 +3,11 @@ import React from 'react';
 import styles from './page.module.css'
 import Button from '@/components/Button';
 
+export const metadata = {
+  title: 'Spotify',
+  description: 'Spotify index page',
+}
+
 export default function Spotify() {
 
   return (
